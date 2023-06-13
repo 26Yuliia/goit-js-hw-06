@@ -1,4 +1,4 @@
-const formElement = document.querySelector(".login-form").reset();
+const formElement = document.querySelector(".login-form");
 
 formElement.addEventListener("submit", handlerSubmit);
 
@@ -17,6 +17,7 @@ function handlerSubmit(event) {
     profile.email = email.value;
     profile.password = password.value;
 
+    formElement.reset();
     console.log(profile);
   }
 }
